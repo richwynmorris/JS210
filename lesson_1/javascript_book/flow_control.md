@@ -137,3 +137,26 @@ function allCapsWord (word) {
 
 console.log(allCapsWord("Hello World"));
 ```
+
+### Exercise 8
+
+Write a function that logs whether a number is between 0 and 50 (inclusive), between 51 and 100 (inclusive), greater than 100, or less than 0.
+
+```Javascript
+numberRange(25);
+numberRange(75);
+numberRange(125);
+numberRange(-25);
+```
+
+```Javascript
+function(num) {
+  switch (num) {
+    case (num > 0 && num <= 50):
+      console.log(`${num} is between 0 and 50`);
+      break;
+    default
+      console.log('test default');  
+  }
+}
+```

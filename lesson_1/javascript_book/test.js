@@ -1,16 +1,13 @@
-function numberRange (num) {
-  if (num > 0 && num <= 50) {
-    console.log(`${num} is between 0 and 50`);
-  } else if (num >= 51 && num <= 100) {
-    console.log(`${num} is between 51 and 100`);
-  } else if (num > 100) {
-    console.log(`${num} is greater than 100`);
-  } else {
-      console.log(`${num} is less than 0`)
-  }
+function randomNumberBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-numberRange(25);
-numberRange(75);
-numberRange(125);
-numberRange(-25);
+let tries = 0;
+let result;
+
+do {
+  result = randomNumberBetween(1, 6);
+  tries += 1;
+} while (result <= 2);
+
+console.log('It took ' + String(tries) + ' tries to get a number greater than 2');
