@@ -1,11 +1,26 @@
-let numbers1 = [1, 3, 5, 7, 9, 11];
-let numbers2 = [];
-let numbers3 = [2, 4, 6, 8];
+let objToCopy = {
+  foo: 1,
+  bar: 2,
+  qux: 3,
+};
 
-function checkArrayFor3(array) {
-  return array.includes(3)
+let newObj = copyObj(objToCopy);
+console.log(newObj);        // => { foo: 1, bar: 2, qux: 3 }
+
+let newObj2 = copyObj(objToCopy, [ 'foo', 'qux' ]);
+console.log(newObj2);       // => { foo: 1, qux: 3 }
+
+let newObj3 = copyObj(objToCopy, [ 'bar' ]);
+console.log(newObj3);       // => { bar: 2 }
+
+function copyObj(obj, keys = undefined) {
+  newObject = {}
+  if (keys !== undefined)
+    keys.forEach(function(key) {
+      newObject[key] = obj[key];
+    })
+  else {
+    Object.assign(newObject, obj)
+  }
+  return newObject
 }
-
-console.log(checkArrayFor3(numbers1))
-console.log(checkArrayFor3(numbers2))
-console.log(checkArrayFor3(numbers3))
