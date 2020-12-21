@@ -1,13 +1,11 @@
-function randomNumberBetween(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+let numbers1 = [1, 3, 5, 7, 9, 11];
+let numbers2 = [];
+let numbers3 = [2, 4, 6, 8];
+
+function checkArrayFor3(array) {
+  return array.includes(3)
 }
 
-let tries = 0;
-let result;
-
-do {
-  result = randomNumberBetween(1, 6);
-  tries += 1;
-} while (result <= 2);
-
-console.log('It took ' + String(tries) + ' tries to get a number greater than 2');
+console.log(checkArrayFor3(numbers1))
+console.log(checkArrayFor3(numbers2))
+console.log(checkArrayFor3(numbers3))
