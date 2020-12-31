@@ -1,5 +1,5 @@
-function multiplesOfThreeAndFive() {
-  for (let index = 1; index <= 100; index++) {
+function multiplesOfThreeAndFive(limit) {
+  for (let index = 1; index <= limit; index++) {
     if (index % 3 === 0 && index % 5 === 0) {
       console.log(String(index) + '!')
     }
@@ -12,4 +12,4 @@ function multiplesOfThreeAndFive() {
   }
 }
 
-multiplesOfThreeAndFive()
+multiplesOfThreeAndFive(100)
