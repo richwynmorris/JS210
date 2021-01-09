@@ -4,7 +4,6 @@
 // returns the new length of the array.
 
 // Examples:
-// pop
 
 function pop(array) {
   if (array.length === 0) {
@@ -17,16 +16,29 @@ function pop(array) {
 
   return lastElement
 }
+
+
+function push() {
+  let array = arguments[0]
+
+  for (let index = 1; index < arguments.length; index++) {
+    array[array.length] = arguments[index]
+  }
+
+  return array.length
+}
+
+// pop
 const array1 = [1, 2, 3];
 console.log(pop(array1));                        // 3
 console.log(array1);                // [1, 2]
 console.log(pop([]));                           // undefined
 console.log(pop([1, 2, ['a', 'b', 'c']]));      // ["a", "b", "c"]
 
-// // push
-// const array2 = [1, 2, 3];
-// push(array2, 4, 5, 6);              // 6
+// push
+const array2 = [1, 2, 3];
+push(array2, 4, 5, 6);              // 6
 // console.log(array2);                // [1, 2, 3, 4, 5, 6]
-// push([1, 2], ['a', 'b']);          // 3
-// push([], 1);                       // 1
-// push([]);                          // 0
+push([1, 2], ['a', 'b']);          // 3
+push([], 1);                       // 1
+push([]);                          // 0
