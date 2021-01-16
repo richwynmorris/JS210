@@ -19,9 +19,9 @@ function stringToInteger(string) {
     multiplyer *= 10
   }
 
-  console.log(number)
+  return number
   
 }
 
-stringToInteger('4321');      // 4321
-stringToInteger('570');       // 570
+console.log(stringToInteger('4321'));      // 4321
+console.log(stringToInteger('570'));       // 570
