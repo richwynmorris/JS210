@@ -10,8 +10,16 @@
 // Examples:
 
 function stringToInteger(string) {
-  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  
+  let digits = string.split('').reverse()
+  let number = 0
+  let multiplyer = 1
+
+  for (let index = 0; digits[index] !== undefined; index++) {
+    number += (digits[index] * multiplyer)
+    multiplyer *= 10
+  }
+
+  console.log(number)
   
 }
 
