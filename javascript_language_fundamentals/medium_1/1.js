@@ -5,8 +5,8 @@
 ((false && undefined) || (false || undefined)); // undefined
 ((false || undefined) || (false && undefined)); // false
 ((false && undefined) && (false || undefined)); // false
-((false || undefined) && (false && undefined)); // false
+((false || undefined) && (false && undefined)); // false x => undefined
 ('a' || (false && undefined) || ''); // 'a'
-((false && undefined) || 'a' || ''); // ''
-('a' && (false || undefined) && ''); // ''
+((false && undefined) || 'a' || ''); // '' x => 'a'
+('a' && (false || undefined) && ''); // '' x => undefined
 ((false || undefined) && 'a' && ''); // undefined
