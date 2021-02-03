@@ -44,8 +44,8 @@ delete person.location
 
 * Objects, unlike primitives, are usually mutable and can have their values changed or modified. 
 
-* When it comes to objects and where they are stored in the memory, variables that are assigned objects, as their values, do not directly reference the object itself in the memory. Instead, the variable is assigned a pointer which references the location of the object which is stored in the memory's heap. This means that when two variables point to the same pointer, they both end up pointing to the same object stored in the heap. Therefore, if the object that is mutated by one of the variables referencing the pointer, any other variables also referencing that pointer will be mutated. 
+* When it comes to objects and where they are stored in the memory, variables that are assigned objects, as their values, do not directly reference the object itself in the memory. Instead, the variable is assigned a pointer which references the location of the object which is stored in the memory's heap. This means two variables, each with their own independent pointer can end up end up pointing to the same object stored in the heap. Therefore, if the object is mutated by one of the variables referencing the pointer, any other variables referencing a pointer which references the same object in the heap will be mutated. 
 
-* When two objects refers to that same pointer in the memory, this is reffered to as aliasing. 
+* When two variables's pointers refer to that same object in the heap, this is referred to as aliasing. 
 
-* Its important to note that when an element is reassigned a new value in an object, such an an array, this is mutating the array object aswell as reassigning the element.
+* Its important to note that when an element is reassigned a new value in an object, such an an array, this is mutating the array object aswell as reassignment. The array has been mutated and the element has been reassigned. 
