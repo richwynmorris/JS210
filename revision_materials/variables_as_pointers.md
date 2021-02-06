@@ -43,4 +43,4 @@ var myVar => mem loc:4561 =>  {a:'1'}
 
 ### Variable declarations 
 
-* When variables are declared with either `let` or `const` they are left in a unset condition after being hoisted. If those variables  are not assigned values at any point in the program, they reference the value `undefined` if used in the program. If they are assigned a value later in the program, Javascript recognises this and raises an error if the variable is used before it is initialized a value. 
+* When variables are declared with either `let` or `const` they are left in a unset condition after being hoisted. If those variables are not assigned values at any point in the program, they reference the value `undefined` if passed to a function in the program. If they are assigned a value later in the program's execution, Javascript recognises this and raises an error if the variable is used before it is initialized a value. 

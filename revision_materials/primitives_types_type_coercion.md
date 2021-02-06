@@ -73,6 +73,12 @@ null + 'a'      // "nulla" -- null is coerced to string
 
 * When the two operands contain a combination of numbers, booleans, undefined or null, it converts the values to numbers and then add them together. Falsy values evaluate to `0` and truthy values evaluate to `1`. `undefined` is always coerced into `NaN` even through it is a falsy. 
 
+* When one of the operands is an object, both the first and second operands are converted to strings and then concatanated together. 
+
+```js
+42 + {}                     // "42[object Object]"
+```
+
 * the non strict equality operators also perform implicit coercions to evaluate the equality of two operands. **PLEASE SEE loose_strict_equality.md for further details. 
 
 ### Explicit Coercion
@@ -93,4 +99,23 @@ if (true) {
 }
 
 console.log(myWord)
+```
+
+
+### Primitives to Objects
+
+As mentioned previously, primitives are immutable. However, we can still call methods on primitives and return a new value. This is because JavaScript comes with built in objects that have the same names as some of the primitives we have seen before. `String`, `Array`, `Math`, `Number`. In order to perform and operation on a primitive value, Javascript first needs to coerce the primitive into it's appropriate Object temporarily and performs the operation as required.
+
+```js
+let a = 'hi';                        // Create a primitive string with value "hi"
+typeof a;                            // "string"; This is a primitive string value
+
+let stringObject = new String('hi'); // Create a string object
+typeof stringObject;                 // "object"; This is a String object
+
+a.toUpperCase();                     // "HI"
+stringObject.toUpperCase();          // "HI"
+
+typeof a;                            // "string"; The coercion is only temporary
+typeof stringObject;                 // "object"
 ```

@@ -16,6 +16,8 @@
 
 * function invocations can be passed as arguments to other functions. The return value of the function invocation will then be used as an argument in a seperate function invocation. 
 
+* A declared function can invoke itself from within it's own body. That mean that a function declaration will create a not only declare a variable that references the function object, but it also becomes a named function. THis means it can be called from within its own body leading to recurssive effects. 
+
 
 
 

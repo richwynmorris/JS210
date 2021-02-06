@@ -1,5 +1,23 @@
 ## Array Methods
 
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+* All built in array methods ignore propeties that do not use a non negative integer as their key. For example, the `.map()` method will ignore any properties that do not conform to the above condition to when iterating over an array and passing each element to it's call back function.
+
+```js
+let array = [1,2,3,4]
+
+array['-1'] = 'hello'
+
+let newArray = array.map(element => element * 2)
+
+console.log(Object.keys(array))
+/// [ '0', '1', '2', '3', '-1' ]
+
+console.log(Object.keys(newArray))
+//[ '0', '1', '2', '3' ]
+```
+
 ### Array.forEach()
 
 * `forEach` is an array method that iterates over each element in an array and passes it to a callback function.
@@ -68,3 +86,42 @@ Object.keys(myObj).forEach(function(element) {
 })
 ```
 
+
+### String.charAt()
+
+* Strings act like a collection of characters. To access a character at a specific index in the string. you can call the `.charAt()` method which will return the character at the index specified.
+
+```js
+'Hello World!'.charAt(2) // => 'l'
+```
+
+* Another way to access characters in a string is to use bracket notation. Bracket notation is Javascript is actually an operator.
+
+```js
+'Hello World!'[2] // => 'l'
+```
+
+* Strings contain a length property which is always the number of characters that exist in the string.
+
+```js
+'Hello World!'.length // => 12  
+```
+
+### JavaScripts Built in Methods
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String 
+
+### Strings used with comparison operators. 
+
+When two strings are used with comparison operators, Javascript works through each character in boths strings and compares them lexicographically. It returns a boolean value based on the first two characters that can be compared and return a boolean value. 
+
+```js
+> 'a5' > 'b6'
+false
+> '5' > 'b6'
+false
+> 'c5' > 'b6'
+true
+```
+
+https://en.wikipedia.org/wiki/List_of_Unicode_characters

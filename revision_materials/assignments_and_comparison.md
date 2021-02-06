@@ -1,6 +1,6 @@
 ### Assignments and Comparison
 
-* Initial variable assignment in javascript is achieved using an **initalizer**. An initializer is the expression in javascript that takes place to the  right of the `=` operator. The initializer only exists when a newly declared variable is assigned an initial value. 
+* Initial variable assignment in javascript is achieved using an **initalizer**. An initializer is the expression in javascript that takes place to the  right of the `=` operator when a variable is declared. The initializer only exists when a newly declared variable is assigned an initial value. Later reassignment of the variable does not use an intializer. 
 
 * The return value of the intial assignment is always `undefined`.
 

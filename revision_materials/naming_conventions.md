@@ -1,5 +1,14 @@
 ### Naming Conventions
 
+* Naming variables use the following conditions 
+
+- Variable names are case sensitive.
+- Variables must start with either a Unicode letter, '_' underscore or '$' dollar sign.
+- Variable names must not use reserved keywords. https://262.ecma-international.org/5.1/#sec-7.6.1.1
+- Variable names can be of any length. 
+
+
+
 * All variables names should start with a lowercase letter.
 
 * When the variable contains two or more words, the variable should start with a lowercase letter and use a upper case letter of each new word in the variable. These words should not be seperated with a space or underscore. This style is called `camelCase`. 
@@ -42,6 +51,9 @@ ALLCAPS = 'value
 ```
 
 * Avoid magic numbers in your code. If you make reference a specific number throughout your program, it can be difficult to identify why that particular number is being used in the context of the code. It is instead better to assign the number to a constant that accurately decribes the numbers function in the context of the program. 
+
+
+
 
 
 

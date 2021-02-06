@@ -26,4 +26,15 @@ let testGreeting = fullGreeting()
 testGreeting()
 ```
 
+### What are closures used for?
+
+  *  Currying (a special form of partial function application)
+  * Emulating private methods
+  *  Creating functions that can only be executed once
+  *  Memoization (avoiding repetitive resource-intensive operations)
+  *  Iterators and generators
+  * The module pattern (putting code and data into modules)
+  *  Asynchronous operations
+
+
 
