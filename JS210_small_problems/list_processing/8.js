@@ -7,5 +7,7 @@ console.log(buyFruit([['apple', 3], ['orange', 1], ['banana', 2]]));
 // returns ["apple", "apple", "apple", "orange", "banana", "banana"]
 
 function buyFruit(lists) {
-  return lists.map(array => (array[0] + ' ').repeat(array[1]).trimEnd().split(' ')).flat()
+  return lists.map(array => (array[0] + ' ').repeat(array[1])
+                                            .trimEnd()
+                                            .split(' ')).flat()
 }
