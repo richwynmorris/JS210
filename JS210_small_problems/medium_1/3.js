@@ -7,7 +7,6 @@ function maxRotation(num){
   let numLength = String(num).length
   
   for(let index = 0; numLength >= 0; numLength -= 1){
-    let strNum = String(num).slice(index)
     num = rotateRightmostDigit(num, numLength)
     index += 1
   }
